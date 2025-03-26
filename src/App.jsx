@@ -5,7 +5,7 @@ import Loader from "./components/Loader";
 import logo from "./assets/logo.png"
 import { SignedIn, SignedOut, SignInButton, UserButton,useUser,useAuth } from "@clerk/clerk-react";
 import Intro from "./components/Intro";
-    
+
 
 
 
@@ -79,7 +79,7 @@ function App() {
 
     <SignedIn>
       <div  className="w-[500px] mx-auto mt-12">
-      <h1 className="text-2xl font-bold">Manage your Taks!<span className="text-neutral-500">{isSignedIn ?user.fullName:""}</span></h1>
+      <h1 className="text-2xl font-bold">Manage your Taks!@<span className="text-neutral-500">{isSignedIn ?user.fullName:""}</span></h1>
       <p>Empowering productivity with seamless task management</p>
       <input ref={taskinput}  className="mt-2 border rounded-xl p-3 w-[300px]  focus:outline-none border-neutral-300" type="text" placeholder="Add Tasks i.e Learn Blockchain" />
 
