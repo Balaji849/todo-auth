@@ -5,10 +5,13 @@ import Loader from "./components/Loader";
 import logo from "./assets/logo.png"
 import { SignedIn, SignedOut, SignInButton, UserButton,useUser,useAuth } from "@clerk/clerk-react";
 import Intro from "./components/Intro";
+    
 
 
 
-const firebaseUrl ='https://front-end-cohort-default-rtdb.asia-southeast1.firebasedatabase.app/'
+
+
+const firebaseUrl ='https://todos-app-5e27d-default-rtdb.asia-southeast1.firebasedatabase.app/'
 
 function App() {
   let {user}=useUser();
@@ -16,6 +19,7 @@ function App() {
   let taskinput=useRef(null)
   let[formStatus,setformStatus]=useState(false)
   let[todos,setTodos]=useState([])
+  
 
   function handleSubmit(){
     setformStatus(true)
@@ -60,10 +64,11 @@ function App() {
     <>
     <div className=" border-b py-3 ">
     <div className="max-w-4xl mx-auto flex justify-between items-center">
-      <img className="h-8" src={logo} alt="" />
+      <img className="h-8 cursor-pointer" src={logo} alt="" 
+      />
     <header>
       <SignedOut>
-        <SignInButton />
+        <SignInButton className="bg-black p-2 text-white rounded-md" />
       </SignedOut>
       <SignedIn>
         <UserButton />

@@ -5,15 +5,18 @@ import pic from "../assets/pic.jpg"
 function Intro() {
   return (
     <>
-    <div className='mt-36 mx-auto max-w-xl text-center'>
-    <div className="">
+    <div className='mt-28 flex justify-center items-center '>
+    
     <BoxReveal boxColor={"#757576"} duration={0.5}>
-             <img src={pic} className='h-40 inline ml-56 ' alt="" />
-      </BoxReveal>
-        </div>    
+
+      <img src={pic} className='h-60 w-60   aspect-square object-cover' alt="Tasky"  />
    
+             
+      </BoxReveal>
         
-       
+        </div>
+        
+     <div className=' mx-auto max-w-xl text-center'>
     <div className="size-full max-w-lg items-center justify-center overflow-hidden pt-8 text-center inline-block">
       <BoxReveal boxColor={"#757576"} duration={0.5}>
         <p className="text-[3.5rem] font-semibold ">
@@ -40,7 +43,8 @@ function Intro() {
         <Button className="mt-[1.6rem] bg-[#000000]">Explore</Button>
       </BoxReveal>
     </div>
-    </div>
+  
+    </div>  
     </>
   )
 }
