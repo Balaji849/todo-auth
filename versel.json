@@ -4,5 +4,12 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "VITE_CLERK_PUBLISHABLE_KEY": "@VITE_CLERK_PUBLISHABLE_KEY"
+    },
+    "command": "npm run build",
+    "outputDirectory": "dist"
+  }
 }

@@ -8,9 +8,6 @@ import Intro from "./components/Intro";
 
 
 
-
-
-
 const firebaseUrl ='https://todos-app-5e27d-default-rtdb.asia-southeast1.firebasedatabase.app/'
 
 function App() {
