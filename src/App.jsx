@@ -59,7 +59,7 @@ function App() {
 
   return (
     <>
-    <div className=" border-b py-3 ">
+    <div className=" border-b py-3 px-2">
     <div className="max-w-4xl mx-auto flex justify-between items-center">
       <img className="h-8 cursor-pointer" src={logo} alt="" 
       />
@@ -75,12 +75,12 @@ function App() {
     </div>
 
     <SignedIn>
-      <div  className="w-[500px] mx-auto mt-12">
-      <h1 className="text-2xl font-bold">Manage your Taks!@<span className="text-neutral-500">{isSignedIn ?user.fullName:""}</span></h1>
-      <p>Empowering productivity with seamless task management</p>
-      <input ref={taskinput}  className="mt-2 border rounded-xl p-3 w-[300px]  focus:outline-none border-neutral-300" type="text" placeholder="Add Tasks i.e Learn Blockchain" />
-
-      <button onClick={handleSubmit} className="mt-2 rounded-xl py-3 px-5 bg-black text-white flex align-center gap-4">
+      <div  className="w-full mx-auto mt-12 text-center">
+      <h1 className="text-2xl font-bold px-2 ">Manage your Taks!@<span className="text-neutral-500">{isSignedIn ?user.fullName:""}</span></h1>
+      <p >Empowering productivity with seamless task management</p>
+      <input ref={taskinput}  className="mt-2 border rounded-xl p-3 w-[300px]  focus:outline-none border-neutral-300" type="text" placeholder="eg: Learn Blockchain Network" />
+       
+      <button onClick={handleSubmit} className="mt-2 rounded-xl py-3 px-5 bg-black text-white flex items-center justify-center mx-auto gap-4 ">
         {!formStatus ? "Create Task" : <Loader/>}
       </button>
 
