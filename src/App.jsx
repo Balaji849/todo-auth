@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Card from "./components/Todocard";
 import Loader from "./components/Loader";
-import logo from "./assets/logo.png";
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser, useAuth } from "@clerk/clerk-react";
 import Intro from "./components/Intro";
 
@@ -125,7 +124,7 @@ function App() {
             <div className="absolute -top-2.5 right-16 w-12 h-4 bg-[#f5c842]/55 border border-[#e0a800]/20 rounded rotate-1" />
 
             <label className="font-['Caveat',cursive] text-[#e63946] text-xs tracking-widest uppercase font-semibold block mb-3 opacity-80">
-              ✏️ New Task
+             <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/pencil.png" alt="pencil"/>  New Task
             </label>
             <div className="flex gap-3 items-stretch">
               <input
@@ -133,7 +132,7 @@ function App() {
                 onKeyDown={handleKeyDown}
                 className="flex-1 bg-transparent border-b-2 border-[#1a1a1a] font-['Caveat',cursive] text-lg text-[#1a1a1a] placeholder-[#b0a080] focus:outline-none focus:border-[#f5c842] transition-colors pb-1"
                 type="text"
-                placeholder="e.g. Learn Blockchain Network…"
+                placeholder="e.g. Push commits to the main branch..."
               />
               <button
                 onClick={handleSubmit}
@@ -147,8 +146,8 @@ function App() {
 
           {/* ── TASKS GRID ── */}
           {myTodos.length === 0 ? (
-            <div className="text-center py-16">
-              <div className="text-6xl mb-4">📭</div>
+            <div className="flex flex-col items-center py-16 ">
+             <img width="60" height="60"src="https://img.icons8.com/quill/100/notepad.png" alt="notepad"/>
               <p className="font-['Caveat',cursive] text-[#8a7f6a] text-xl">No tasks yet — add one above!</p>
             </div>
           ) : (

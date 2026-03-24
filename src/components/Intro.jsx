@@ -21,7 +21,7 @@ const FEATURES = [
 ];
 
 const INITIAL_ITEMS = [
-  { id: 0, text: 'Set up your workspace', done: true },
+  { id: 0, text: 'Set up your workspace', done: false },
   { id: 1, text: "Prioritize today's tasks", done: false },
   { id: 2, text: 'Organize & achieve your goals', done: false },
 ];
