@@ -3,21 +3,64 @@ import { useState } from "react";
 import { SignInButton } from "@clerk/clerk-react";
 
 const BG_STICKIES = [
-  { text: "📌 Buy groceries\n- Milk\n- Eggs", color: 'bg-[#fff9c4]', border: 'border-t-[#f5c842]', pos: 'top-[12%] left-[4%]', rot: '-rotate-6' },
-  { text: "⭐ High priority:\nFinish report", color: 'bg-[#ffd6d6]', border: 'border-t-[#ff9090]', pos: 'top-[22%] left-[9%]', rot: 'rotate-3' },
-  { text: "💡 Ideas for\nQ2 goals", color: 'bg-[#d6f0ff]', border: 'border-t-[#7ec8e3]', pos: 'top-[58%] left-[3%]', rot: '-rotate-4' },
-  { text: "✅ Call dentist\n📅 Thursday", color: 'bg-[#d6ffd6]', border: 'border-t-[#72c472]', pos: 'top-[72%] left-[7%]', rot: 'rotate-6' },
-  { text: "🎯 Sprint goals\nDue Friday", color: 'bg-[#ffd6f5]', border: 'border-t-[#e880c8]', pos: 'top-[10%] right-[5%]', rot: 'rotate-5' },
-  { text: "📝 Meeting\nnotes @ 3pm", color: 'bg-[#fff9c4]', border: 'border-t-[#f5c842]', pos: 'top-[38%] right-[3%]', rot: '-rotate-6' },
-  { text: "🚀 Ship v2.0\nnext week!", color: 'bg-[#ffe0b2]', border: 'border-t-[#ff9800]', pos: 'top-[65%] right-[6%]', rot: 'rotate-3' },
-  { text: "☕ Coffee\nwith team", color: 'bg-[#d6f0ff]', border: 'border-t-[#7ec8e3]', pos: 'bottom-[10%] right-[12%]', rot: '-rotate-5' },
+  { 
+    text: "Buy groceries\n- Milk\n- Eggs", 
+    icon: "https://img.icons8.com/parakeet-partial-filled/48/FA5252/pin.png",
+    color: 'bg-[#fff9c4]', border: 'border-t-[#f5c842]', pos: 'top-[12%] left-[4%]', rot: '-rotate-6' 
+  },
+  { 
+    text: "High priority:\nFinish report", 
+    icon: "https://img.icons8.com/comic/50/high-priority.png",
+    color: 'bg-[#ffd6d6]', border: 'border-t-[#ff9090]', pos: 'top-[22%] left-[9%]', rot: 'rotate-3' 
+  },
+  { 
+    text: "Ideas for\nQ2 goals", 
+    icon: "https://img.icons8.com/external-filled-outline-design-circle/64/external-Quaternary-smart-industries-filled-outline-design-circle.png",
+    color: 'bg-[#d6f0ff]', border: 'border-t-[#7ec8e3]', pos: 'top-[58%] left-[3%]', rot: '-rotate-4' 
+  },
+  { 
+    text: "Call dentist\nThursday", 
+    icon: "https://img.icons8.com/pastel-glyph/64/tooth--v1.png",
+    color: 'bg-[#d6ffd6]', border: 'border-t-[#72c472]', pos: 'top-[72%] left-[7%]', rot: 'rotate-6' 
+  },
+  { 
+    text: "Sprint goals\nDue Friday", 
+    icon: "https://img.icons8.com/quill/50/goal.png",
+    color: 'bg-[#ffd6f5]', border: 'border-t-[#e880c8]', pos: 'top-[10%] right-[5%]', rot: 'rotate-5' 
+  },
+  { 
+    text: "Meeting\nnotes @ 3pm", 
+    icon: "https://img.icons8.com/wired/64/meeting.png",
+    color: 'bg-[#fff9c4]', border: 'border-t-[#f5c842]', pos: 'top-[38%] right-[3%]', rot: '-rotate-6' 
+  },
+  { 
+    text: "Ship v2.0\nnext week!", 
+    icon: "https://img.icons8.com/ink/48/rocket.png",
+    color: 'bg-[#ffe0b2]', border: 'border-t-[#ff9800]', pos: 'top-[65%] right-[6%]', rot: 'rotate-3' 
+  },
+  { 
+    text: "Coffee\nwith team", 
+    icon: "https://img.icons8.com/wired/64/espresso-cup.png",
+    color: 'bg-[#d6f0ff]', border: 'border-t-[#7ec8e3]', pos: 'bottom-[10%] right-[12%]', rot: '-rotate-5' 
+  },
 ];
-
 const FEATURES = [
-  { icon: '⚡', title: 'Fast & Simple', desc: 'Add tasks in seconds', color: 'border-t-[#f5c842]', rot: '-rotate-3' },
-  { icon: '🗂️', title: 'Organized', desc: 'Group by project', color: 'border-t-[#7ec8e3]', rot: 'rotate-2' },
-  { icon: '🔔', title: 'Reminders', desc: 'Never miss a deadline', color: 'border-t-[#72c472]', rot: '-rotate-1' },
-  { icon: '🎯', title: 'Focus Mode', desc: 'One task at a time', color: 'border-t-[#e880c8]', rot: 'rotate-3' },
+  { 
+    icon: "https://img.icons8.com/parakeet-partial-filled/48/FA5252/lightning-bolt.png",
+    title: 'Fast & Simple', desc: 'Add tasks in seconds', color: 'border-t-[#f5c842]', rot: '-rotate-3' 
+  },
+  { 
+    icon: "https://img.icons8.com/parakeet-partial-filled/48/FA5252/opened-folder.png",
+    title: 'Organized', desc: 'Group by project', color: 'border-t-[#7ec8e3]', rot: 'rotate-2' 
+  },
+  { 
+    icon: "https://img.icons8.com/parakeet-partial-filled/48/FA5252/appointment-reminders.png",
+    title: 'Reminders', desc: 'Never miss a deadline', color: 'border-t-[#72c472]', rot: '-rotate-1' 
+  },
+  { 
+    icon: "https://img.icons8.com/parakeet-partial-filled/48/FA5252/goal.png",
+    title: 'Focus Mode', desc: 'One task at a time', color: 'border-t-[#e880c8]', rot: 'rotate-3' 
+  },
 ];
 
 const INITIAL_ITEMS = [
@@ -40,15 +83,22 @@ function Intro() {
 
       {/* Background decorative stickies */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {BG_STICKIES.map((s, i) => (
-          <div
-            key={i}
-            className={`absolute w-28 ${s.color} border-t-[26px] ${s.border} ${s.pos} ${s.rot} rounded-sm shadow-[3px_4px_12px_rgba(60,45,10,0.18)] p-3 pt-2 font-['Caveat',cursive] text-[0.8rem] text-[#1a1a1a] leading-relaxed hidden md:block`}
-            style={{ whiteSpace: 'pre-line' }}
-          >
-            {s.text}
-          </div>
-        ))}
+       {BG_STICKIES.map((s, i) => (
+  <div
+    key={i}
+    className={`absolute w-28 ${s.color} border-t-[26px] ${s.border} ${s.pos} ${s.rot} rounded-sm shadow-[3px_4px_12px_rgba(60,45,10,0.18)] p-3 pt-2 font-['Caveat',cursive] text-[0.8rem] text-[#1a1a1a] leading-relaxed hidden md:block`}
+    style={{ whiteSpace: 'pre-line' }}
+  >
+    <img
+      src={s.icon}
+      width={18}
+      height={18}
+      alt=""
+      className="absolute -top-6 left-1/2 -translate-x-1/2"
+    />
+    {s.text}
+  </div>
+))}
       </div>
 
       {/* Main hero card */}
@@ -130,15 +180,16 @@ function Intro() {
       {/* Feature sticky notes */}
       <div className="flex flex-wrap justify-center gap-5 mt-8 z-10">
         {FEATURES.map((f, i) => (
-          <div
-            key={i}
-            className={`bg-[#fdf9f0] border-t-8 ${f.color} ${f.rot} rounded-sm w-40 p-4 pt-3 shadow-[3px_5px_14px_rgba(60,45,10,0.16)] hover:-translate-y-2 hover:rotate-0 transition-all duration-200 font-['Caveat',cursive]`}
-          >
-            <div className="text-2xl mb-2">{f.icon}</div>
-            <div className="font-bold text-[#1a1a1a] text-base mb-1">{f.title}</div>
-            <div className="text-[#3a3530] text-sm leading-snug">{f.desc}</div>
-          </div>
-        ))}
+  <div
+    key={i}
+    className={`bg-[#fdf9f0] border-t-8 ${f.color} ${f.rot} rounded-sm w-40 p-4 pt-3 shadow-[3px_5px_14px_rgba(60,45,10,0.16)] hover:-translate-y-2 hover:rotate-0 transition-all duration-200 font-['Caveat',cursive]`}
+  >
+    {/* Replace the old <div className="text-2xl mb-2">{f.icon}</div> with this: */}
+    <img src={f.icon} width={28} height={28} alt="" className="mb-2" />
+    <div className="font-bold text-[#1a1a1a] text-base mb-1">{f.title}</div>
+    <div className="text-[#3a3530] text-sm leading-snug">{f.desc}</div>
+  </div>
+))}
       </div>
     </section>
   );
