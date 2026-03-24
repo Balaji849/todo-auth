@@ -122,7 +122,7 @@ function Intro() {
         </div>
 
         <p className="font-['Caveat',cursive] text-[#e63946] text-xs tracking-widest uppercase font-semibold mb-2 opacity-80">
-          📋 Your personal workspace
+         <img width="40" height="40" className="mb-2" src="https://img.icons8.com/ink/40/task.png" alt="task"/> Your personal workspace
         </p>
 
         <h1 className="font-['Permanent_Marker',cursive] text-6xl text-[#1a1a1a] leading-none mb-3">
