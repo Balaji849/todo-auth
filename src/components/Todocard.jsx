@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 // src/components/Todocard.jsx
 import { useState } from "react";
 
@@ -82,3 +83,4 @@ function Card({ title, handleDelete, id, index = 0 }) {
 }
 
 export default Card;
+Card.propTypes = { title: PropTypes.string.isRequired, handleDelete: PropTypes.func.isRequired, id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, index: PropTypes.number };

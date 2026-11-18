@@ -79,7 +79,7 @@ function Intro() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 pb-12 relative overflow-hidden">
+    <section className="min-h-screen w-full flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden">
 
       {/* Background decorative stickies */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

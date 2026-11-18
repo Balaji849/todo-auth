@@ -1,0 +1,204 @@
+﻿body:has(.welcome-shell) {
+  background: #f2f4f5;
+}
+.welcome-shell {
+  width: calc(100% - 48px);
+  max-width: 1180px;
+  min-height: min(700px, calc(100svh - 48px));
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border: 1px solid #e5e9eb;
+  border-radius: 18px;
+  overflow: clip;
+}
+.welcome-form-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+}
+.welcome-navigation {
+  display: flex;
+  align-items: center;
+}
+.welcome-brand {
+  display: inline-flex;
+  align-items: center;
+  color: #183238;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -1.4px;
+  line-height: 1;
+  text-decoration: none;
+}
+.welcome-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background: #183c42;
+  color: #fff;
+}
+.welcome-brand-dot { color: #ce8d59; }
+.welcome-form-content {
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  padding: 36px 0;
+}
+.welcome-heading { margin-bottom: 28px; }
+.welcome-heading h1 {
+  max-width: 420px;
+  color: #183238;
+  font-size: clamp(28px, 2.6vw, 34px);
+  font-weight: 700;
+  letter-spacing: -1.1px;
+  line-height: 1.2;
+}
+.welcome-heading p {
+  margin-top: 10px;
+  color: #66767d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.welcome-auth-widget { width: 100%; }
+.welcome-auth-widget .welcome-clerk-root,
+.welcome-auth-widget .welcome-clerk-card-box { width: 100%; max-width: 100%; }
+.welcome-auth-widget .welcome-clerk-card-box {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+.welcome-auth-widget .welcome-clerk-card {
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  gap: 20px;
+}
+.auth-initial-step .welcome-auth-widget .cl-header { display: none; }
+.welcome-auth-widget .cl-main { gap: 20px; }
+.welcome-auth-widget .cl-form { gap: 16px; }
+.welcome-auth-widget .welcome-clerk-input {
+  min-height: 46px;
+  border: 1px solid #d4dde1;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 12px 14px;
+  background: #fff;
+  font-size: 13px;
+}
+.welcome-auth-widget .welcome-clerk-input:focus {
+  border-color: #6a949f;
+  box-shadow: 0 0 0 3px #bad9e72e;
+  outline: none;
+}
+.welcome-auth-widget .cl-formFieldInputShowPasswordButton { margin-right: 5px; color: #6f848d; }
+.welcome-auth-widget .cl-formFieldLabel { font-size: 12px; font-weight: 500; color: #344f57; }
+.welcome-auth-widget .cl-formFieldAction { font-size: 11px; color: #345d69; }
+.welcome-auth-widget .welcome-clerk-primary {
+  min-height: 46px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  box-shadow: none;
+  border-radius: 8px;
+  color: #fff;
+  background: #183c42;
+  border: 1px solid #183c42;
+}
+.welcome-auth-widget .welcome-clerk-primary:hover { background: #28545a; }
+.welcome-auth-widget .cl-dividerText { font-size: 11px; color: #7c8b92; }
+.welcome-auth-widget .cl-dividerLine { background: #e6ecef; }
+.welcome-auth-widget .cl-socialButtons { display: flex; justify-content: center; gap: 12px; }
+.welcome-auth-widget .welcome-clerk-social {
+  width: 46px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #dce4e8;
+  box-shadow: none;
+  background: #fff;
+  flex: none;
+}
+.welcome-auth-widget .welcome-clerk-social:hover { background: #f2f6f7; }
+.welcome-auth-widget .cl-socialButtonsIconButton img { width: 20px; height: 20px; }
+.welcome-auth-widget .cl-footer {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 20px 0 0;
+  border-radius: 0;
+  gap: 14px;
+}
+.welcome-auth-widget .cl-footerAction { justify-content: flex-start; }
+.welcome-auth-widget .cl-footerActionText { font-size: 12px; color: #667a84; }
+.welcome-auth-widget .welcome-clerk-link { color: #2d697a; font-size: 12px; font-weight: 500; }
+.welcome-auth-widget .cl-formFieldErrorText,
+.welcome-auth-widget .cl-alertText { font-size: 12px; line-height: 1.6; }
+.welcome-visual-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 44px 24px;
+  background: #eaf3f6;
+}
+.welcome-showcase-copy { width: 100%; text-align: center; }
+.welcome-showcase-copy h2 {
+  color: #284b57;
+  font-size: clamp(25px, 2.7vw, 35px);
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+.welcome-showcase-copy p {
+  margin-top: 12px;
+  color: #607d89;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.welcome-illustration {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  max-height: min(420px, 52svh);
+  object-fit: contain;
+  user-select: none;
+}
+.auth-unavailable { border: 1px solid #e7dccf; background: #fdf9f3; border-radius: 10px; padding: 22px; }
+.auth-unavailable h2 { color: #544c41; font-size: 16px; font-weight: 500; }
+.auth-unavailable p { font-size: 12px; color: #84796b; line-height: 1.8; margin: 12px 0 19px; }
+.auth-skeleton { display: flex; flex-direction: column; gap: 16px; min-height: 280px; padding-top: 12px; }
+.auth-skeleton > div { height: 46px; border-radius: 8px; background: #eef3f5; }
+.auth-skeleton > div:nth-child(3) { margin-top: 16px; background: #dce7eb; }
+.auth-skeleton > span { color: #718791; font-size: 12px; margin-top: 15px; }
+@media (min-width: 1440px) {
+  .welcome-shell { margin-top: max(24px, calc((100svh - 700px) / 2)); }
+}
+@media (max-width: 1000px) {
+  .welcome-form-panel { padding: 26px; }
+  .welcome-visual-panel { padding: 36px 20px; }
+  .welcome-showcase-copy p { font-size: 12px; }
+}
+@media (max-width: 760px) {
+  .welcome-shell { width: calc(100% - 24px); min-height: calc(100svh - 24px); margin: 12px auto; grid-template-columns: 1fr; border-radius: 14px; }
+  .welcome-form-panel { padding: 26px; }
+  .welcome-form-content { padding: 44px 0; max-width: 380px; }
+  .welcome-heading h1 { font-size: 32px; }
+  .welcome-visual-panel { display: none; }
+}
+@media (max-width: 420px) {
+  .welcome-form-panel { padding: 22px; }
+  .welcome-heading h1 { font-size: 30px; }
+}
